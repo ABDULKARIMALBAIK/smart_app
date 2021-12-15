@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.abdulkarimalbaik.dev.smartapp">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera2.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera2.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera2.front.autofocus"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_start"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_start"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ObjectActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".HumanActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".CannyActivity" android:screenOrientation="landscape">
+
+        </activity>
+
+
+        <!-- Needed for Android >= Nougat for file access to sharing a photo in any app -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.abdulkarimalbaik.dev.smartapp.myprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <!-- Needed for Android >= Nougat for file access to sharing a photo in any app -->
+
+    </application>
+
+</manifest>

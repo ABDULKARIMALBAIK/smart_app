@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnCanny"
+            android:text="Detect Edges"
+            android:textColor="#2d34fd"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:fButtonColor="@android:color/white"
+            app:shadowColor="#2d34fd"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"
+            app:cornerRadius="4dp"
+            />
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnObject"
+            android:text="Detect Objects"
+            android:textColor="#fd2d3b"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:fButtonColor="@android:color/white"
+            app:shadowColor="#fd2d3b"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"
+            app:cornerRadius="4dp"
+            />
+
+        <info.hoang8f.widget.FButton
+        android:id="@+id/btnHumans"
+        android:text="Detect Humans"
+        android:textColor="#127e01"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:fButtonColor="@android:color/white"
+        app:shadowColor="#127e01"
+        app:shadowEnabled="true"
+        app:shadowHeight="5dp"
+        app:cornerRadius="4dp"
+        />
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnFace"
+            android:text="Recognize Face"
+            android:textColor="#dfd104"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:fButtonColor="@android:color/white"
+            app:shadowColor="#dfd104"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"
+            app:cornerRadius="4dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
